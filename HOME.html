@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <title>
+            HOME
+        </title>
+        <meta chartset='UTF-8'>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body>
+        <header>
+            <div id="navbar">
+                <ul>
+                    <li><a href="HOME.html"><button class="btn active">HOME</button></a></li>
+                    <li><a href="TREATMENT.html" ><button class="btn">TREATMENT</button></a></li>
+                    <li><a href="AMOUNT.HTML"><button class="btn">AMOUNT</button></a></li>
+                    <li><a class="about" href="ABOUT.html"><button class="btn">ABOUT</button></a></li>
+                </ul>
+            </div>
+        </header>
+        <script>
+                var header = document.getElementById("navbar");
+                var btns = header.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                  btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                  });
+                }
+                </script>
+                
+    <form class="form">
+        <div class="left-content">
+        <b>ID:</b><br>
+        <input placeholder=" Enter ID" type="text" name="ID"><br><br>
+        <b>Patient's Name:</b><br>
+        <input  type="text" name="name"><br><br>
+        <b>Age:</b>
+        <input id="age" type="number" name="age"><br><br>
+        <b>Date of birth:</b>
+        <input placeholder="dd-mm-yyyy" type="date" name="date"><br><br>
+        <b>Gender:</b><br>
+        <select id="Gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+        <b>Moblie Number:</b><br>
+        <input type="number" name="mobile"><br><br>
+        <b>Address:</b><br>
+        <input type="text" name="address"><br><br>
+        <b>Chief complaint:</b><br>
+        <input type="text" name="complaint"><br><br>
+        <b>Allergic to:</b><br>
+        <input type="text" name="allergy"><br><br>
+       
+    </div>
+        <div class="right-content">
+        <b>Medical History:</b><br><br>
+        <input id="Diabetes" type="checkbox" name="History" value="Diabetes">
+        <label for="Diabetes">Diabetes</label><br>  
+        <input id="Hypertension" type="checkbox" name="History" value="Hypertension">
+        <label for="Hypertension">Hypertension</label><br>
+        <input id="koch" type="checkbox" name="History" value="koch">
+        <label for="koch">Koch</label><br>
+        <input id="Renal Failure" type="checkbox" name="History" value="Renal Failure">
+        <label for="Renal Failure">Renal Failure</label><br>
+        <input id="Arthritis" type="checkbox" name="History" value="Arthritis">
+        <label for="Arthritis">Arthritis</label><br>
+        <input id="Asthama" type="checkbox" name="History" value="Asthama">
+        <label for="Asthama">Asthama</label><br>
+        <input id="Jaundice" type="checkbox" name="History" value="Jaundice">
+        <label for="Jaundice">Jaundice</label><br>
+        <input id="Heart Disorder" type="checkbox" name="History" value="Heart Disorder">
+        <label for="Heart Disorder">Heart Disorder</label><br>
+        <input id="Thyroid" type="checkbox" name="History" value="Thyroid">
+        <label for="Thyroid">Thyroid</label><br>
+        <input id="Bleeding Disorder" type="checkbox" name="History" value="Bleeding Disorder">
+        <label for="Bleeding Disorder">Bleeding Disorder</label><br>
+        <input id="Other" type="checkbox" name="History" value="Other">
+        <label for="Other">Other:</label><br>
+        <input type="text" name="other"><br><br>
+        <b>Past Dental History:</b><br>
+        <textarea id="pdh" name="DentalHistory"></textarea><br><br>
+        <b>Blood Group:</b><br>
+        <input type="text" name="blood"><br><br>
+        <input type="submit" name="submit"><br><br>
+        <input type="reset" name="reset"><br>
+    </div>
+        </form>
+    </body>
+    </html>
